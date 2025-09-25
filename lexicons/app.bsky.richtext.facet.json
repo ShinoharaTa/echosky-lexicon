@@ -1,0 +1,15 @@
+{
+  "lexicon": 1,
+  "id": "app.bsky.richtext.facet",
+  "defs": {
+    "main": {
+      "type": "object",
+      "description": "Minimal stub for validation",
+      "properties": {
+        "index": { "type": "object", "properties": { "byteStart": { "type": "integer" }, "byteEnd": { "type": "integer" } } },
+        "features": { "type": "array", "items": { "type": "unknown" } }
+      }
+    }
+  }
+}
+

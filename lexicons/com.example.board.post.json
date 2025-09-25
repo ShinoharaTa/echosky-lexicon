@@ -1,0 +1,30 @@
+{
+  "lexicon": 1,
+  "id": "com.example.board.post",
+  "defs": {
+    "record": {
+      "type": "record",
+      "description": "スレ内の投稿（メンション/参照対応）",
+      "record": {
+        "type": "object",
+        "required": ["thread", "text", "createdAt"],
+        "properties": {
+          "thread": { "type": "string" },
+          "text": { "type": "string", "maxLength": 5000 },
+          "createdAt": { "type": "string", "format": "datetime" },
+          "facets": {
+            "type": "array",
+            "items": { "$ref": "app.bsky.richtext.facet" }
+          },
+          "refPost": {
+            "type": "ref",
+            "ref": "com.atproto.repo.strongRef",
+            "nullable": true,
+            "description": ">>123 参照（対象投稿の AT URI/CID）"
+          }
+        }
+      }
+    }
+  }
+}
+

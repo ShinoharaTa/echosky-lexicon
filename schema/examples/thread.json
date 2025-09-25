@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "example": {
+    "title": "雑談スレ",
+    "board": "general",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+}
+

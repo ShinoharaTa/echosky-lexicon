@@ -1,0 +1,24 @@
+{
+  "lexicon": 1,
+  "id": "com.example.board.reaction",
+  "defs": {
+    "record": {
+      "type": "record",
+      "description": "投稿へのリアクション",
+      "key": "r-{subject}-{reaction}-{did}",
+      "record": {
+        "type": "object",
+        "required": ["subject", "reaction", "createdAt"],
+        "properties": {
+          "subject": { "type": "ref", "ref": "com.atproto.repo.strongRef" },
+          "reaction": {
+            "type": "string",
+            "enum": ["like", "laugh", "sad", "angry", "star"]
+          },
+          "createdAt": { "type": "string", "format": "datetime" }
+        }
+      }
+    }
+  }
+}
+

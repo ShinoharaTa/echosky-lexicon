@@ -1,0 +1,24 @@
+{
+  "name": "@example/board-lexicons",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "lexicons/",
+    "dist/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "ts-node --esm scripts/build-types.ts && ts-node --esm scripts/validate.ts",
+    "validate": "ts-node --esm scripts/validate.ts",
+    "diff": "ts-node --esm scripts/diff-compat.ts",
+    "docs": "ts-node --esm scripts/generate-docs.ts"
+  },
+  "devDependencies": {
+    "@atproto/lexicon": "^0.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

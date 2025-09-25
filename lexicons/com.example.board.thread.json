@@ -1,0 +1,21 @@
+{
+  "lexicon": 1,
+  "id": "com.example.board.thread",
+  "defs": {
+    "record": {
+      "type": "record",
+      "description": "掲示板スレッド",
+      "key": "tid-{tid}",
+      "record": {
+        "type": "object",
+        "required": ["title", "createdAt"],
+        "properties": {
+          "title": { "type": "string", "maxLength": 200 },
+          "board": { "type": "string", "maxLength": 50 },
+          "createdAt": { "type": "string", "format": "datetime" }
+        }
+      }
+    }
+  }
+}
+

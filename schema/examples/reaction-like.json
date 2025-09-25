@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "example": {
+    "subject": {
+      "uri": "at://did:example:alice/com.example.board.post/3jyuki2x",
+      "cid": "bafyreid2"
+    },
+    "reaction": "like",
+    "createdAt": "2024-01-01T00:02:00.000Z"
+  }
+}
+
