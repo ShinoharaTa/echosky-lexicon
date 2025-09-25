@@ -1,6 +1,6 @@
 {
   "lexicon": 1,
-  "id": "com.example.board.reaction",
+  "id": "app.echosky.board.reaction",
   "defs": {
     "record": {
       "type": "record",

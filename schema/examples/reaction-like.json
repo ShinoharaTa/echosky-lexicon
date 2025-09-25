@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "example": {
     "subject": {
-      "uri": "at://did:example:alice/com.example.board.post/3jyuki2x",
+      "uri": "at://did:example:alice/app.echosky.board.post/3jyuki2x",
       "cid": "bafyreid2"
     },
     "reaction": "like",

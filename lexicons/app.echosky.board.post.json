@@ -1,6 +1,6 @@
 {
   "lexicon": 1,
-  "id": "com.example.board.post",
+  "id": "app.echosky.board.post",
   "defs": {
     "record": {
       "type": "record",

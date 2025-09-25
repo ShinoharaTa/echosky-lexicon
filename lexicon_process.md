@@ -14,9 +14,9 @@
 
 ## 想定するスキーマ（MVP）
 
-* `com.example.board.thread`：スレッド
-* `com.example.board.post`：レス（メンション・アンカー対応）
-* `com.example.board.reaction`：リアクション（like/laugh/sad/angry/star）
+* `app.echosky.board.thread`：スレッド
+* `app.echosky.board.post`：レス（メンション・アンカー対応）
+* `app.echosky.board.reaction`：リアクション（like/laugh/sad/angry/star）
 
 > 将来：モデレーション、ラベル、添付（BLOB）などの Lexicon を追加。
 
@@ -26,9 +26,9 @@
 
 ```
 lexicons/
-  com.example.board.thread.json
-  com.example.board.post.json
-  com.example.board.reaction.json
+  app.echosky.board.thread.json
+  app.echosky.board.post.json
+  app.echosky.board.reaction.json
 schema/
   meta/                      # 取り込むメタスキーマ類（必要なら）
   examples/                  # サンプルレコード
@@ -54,12 +54,12 @@ LICENSE
 
 > **注意**：`id` はパッケージの名前空間（逆ドメイン）に合わせて変更してください。
 
-### `lexicons/com.example.board.thread.json`
+### `lexicons/app.echosky.board.thread.json`
 
 ```json
 {
   "lexicon": 1,
-  "id": "com.example.board.thread",
+  "id": "app.echosky.board.thread",
   "defs": {
     "record": {
       "type": "record",
@@ -79,12 +79,12 @@ LICENSE
 }
 ```
 
-### `lexicons/com.example.board.post.json`
+### `lexicons/app.echosky.board.post.json`
 
 ```json
 {
   "lexicon": 1,
-  "id": "com.example.board.post",
+  "id": "app.echosky.board.post",
   "defs": {
     "record": {
       "type": "record",
@@ -113,12 +113,12 @@ LICENSE
 }
 ```
 
-### `lexicons/com.example.board.reaction.json`
+### `lexicons/app.echosky.board.reaction.json`
 
 ```json
 {
   "lexicon": 1,
-  "id": "com.example.board.reaction",
+  "id": "app.echosky.board.reaction",
   "defs": {
     "record": {
       "type": "record",
@@ -356,15 +356,15 @@ jobs:
 
 ## 利用（フロントエンド側）
 
-* `@example/board-lexicons` を依存に追加し、`com_example_board_post` 等の **定義 JSON を直接参照**。
-* atproto クライアントで `collection` 名として `id` を使用（例：`com.example.board.post`）。
+* `@echosky/board-lexicons` を依存に追加し、`app_echosky_board_post` 等の **定義 JSON を直接参照**。
+* atproto クライアントで `collection` 名として `id` を使用（例：`app.echosky.board.post`）。
 * UI 側のバリデーションに **同じ制約（maxLength 等）** を適用。
 
 ---
 
 ## 命名・スタイル規約
 
-* `id` は **逆ドメイン**（`com.example.*`）
+* `id` は **逆ドメイン**（`app.echosky.*`）
 * `record.description` を **簡潔に** ただし具体的に
 * フィールド名は `camelCase`
 * 日時は ISO8601（`format: datetime`）
@@ -404,11 +404,11 @@ npm i @example/board-lexicons
 
 * コレクション名：
 
-  * `com.example.board.thread`
-  * `com.example.board.post`
-  * `com.example.board.reaction`
+  * `app.echosky.board.thread`
+  * `app.echosky.board.post`
+  * `app.echosky.board.reaction`
 
-* クライアント例：`com.atproto.repo.createRecord({ collection: 'com.example.board.post', ... })`
+* クライアント例：`com.atproto.repo.createRecord({ collection: 'app.echosky.board.post', ... })`
 
 ## Development
 

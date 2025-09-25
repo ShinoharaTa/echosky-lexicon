@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "example": {
-    "thread": "at://did:example:alice/app.bsky.feed.post/3jyuki2x",
+    "thread": "at://did:example:alice/app.echosky.board.thread/tid-1",
     "text": ">>1 いらっしゃい！ @bob.bsky.social",
     "createdAt": "2024-01-01T00:01:00.000Z",
     "facets": [],
