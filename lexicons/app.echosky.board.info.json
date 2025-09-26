@@ -1,0 +1,52 @@
+{
+  "lexicon": 1,
+  "id": "app.echosky.board.info",
+  "defs": {
+    "record": {
+      "type": "record",
+      "description": "掲示板の基本情報（名前・説明・サムネイル）",
+      "key": "board-{boardId}",
+      "record": {
+        "type": "object",
+        "required": ["boardId", "name", "createdAt"],
+        "properties": {
+          "boardId": {
+            "type": "string",
+            "maxLength": 50,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "description": "ボードの一意識別子（英数字・ハイフン・アンダースコアのみ）"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "ボード表示名"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 1000,
+            "nullable": true,
+            "description": "ボードの説明文"
+          },
+          "thumbnail": {
+            "type": "blob",
+            "accept": ["image/png", "image/jpeg", "image/webp"],
+            "maxSize": 1048576,
+            "nullable": true,
+            "description": "ボードのサムネイル画像（1MB以下のPNG/JPEG/WebP）"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "ボード作成日時"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "datetime",
+            "nullable": true,
+            "description": "最終更新日時"
+          }
+        }
+      }
+    }
+  }
+}
